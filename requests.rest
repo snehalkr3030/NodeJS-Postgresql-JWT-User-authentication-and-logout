@@ -1,0 +1,24 @@
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "name":"snehal",
+    "email":"snehal@email.com",
+    "password":"snehal1234"
+}
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "email":"snehal@email.com",
+    "password":"snehal1234"
+}
+
+###
+
+GET http://localhost:5000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjk4N2FjNTEtYTI4ZS00ZTYzLTg5ZGMtNDQ2YzdhMWEyNTk5IiwidXNlcl9uYW1lIjoic25laGFsIiwidXNlcl9lbWFpbCI6InNuZWhhbEBlbWFpbC5jb20iLCJpYXQiOjE3MTUyODUwNjUsImV4cCI6MTcxNTI4NTA4NX0.73KeIj_mxhlQq-dGcaDGs7AQLJ1fu3X1QtbqJ68Lo7o
+
+###
+GET http://localhost:5000/api/auth/refresh_token
